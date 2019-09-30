@@ -1,0 +1,9 @@
+url: https://api.stackexchange.com/2.2
+
+sites:
+  - stackoverflow
+  - serverfault
+  - unix
+
+tags:
+  - cloud-init
