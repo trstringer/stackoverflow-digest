@@ -6,4 +6,4 @@ sites:
   - unix
 
 tags:
-  - cloud-init
+  - python

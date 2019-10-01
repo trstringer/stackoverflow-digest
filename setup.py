@@ -11,7 +11,7 @@ setup(
     author='Thomas Stringer',
     author_email='github@trstringer.com',
     license='MIT',
-    install_requires=['requests'],
+    install_requires=['requests', 'PyYAML'],
     packages=find_packages(),
     entry_points=dict(
         console_scripts=['sodigest=sodigest.main:main']
