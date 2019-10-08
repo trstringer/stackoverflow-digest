@@ -28,11 +28,6 @@ def main() -> None:
         help='show resolved questions (ones that have an accepted answer)'
     )
     parser.add_argument(
-        '-e', '--email',
-        action='store_true',
-        help='email the results with the configured settings'
-    )
-    parser.add_argument(
         '-t', '--top',
         default=100,
         type=int,
