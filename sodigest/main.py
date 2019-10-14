@@ -62,8 +62,7 @@ def main() -> None:
                 show_resolved=args.show_resolved):
             output += question.prettify()
 
-    if not args.email:
-        print(output)
+    print(output)
 
     # Cache the last time this was run.
     set_last_date(last_date=int(time.time()))
