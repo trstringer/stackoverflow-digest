@@ -16,5 +16,5 @@ steps:
       pip install -r requirements.txt
     displayName: 'Install requirements'
 
-  - script: printenv
+  - script: . venv/bin/activate && printenv
     displayName: 'Test environment'
