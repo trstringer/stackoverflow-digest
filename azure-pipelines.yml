@@ -16,5 +16,5 @@ steps:
       pip install -r requirements.txt
     displayName: 'Install requirements'
 
-  - script: . venv/bin/activate && printenv
-    displayName: 'Test environment'
+  - script: . venv/bin/activate && pylint sodigest
+    displayName: 'Lint'
