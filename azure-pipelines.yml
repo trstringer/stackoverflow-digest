@@ -16,5 +16,8 @@ steps:
       pip install -r requirements.txt
     displayName: 'Install requirements'
 
+  - script: . venv/bin/activate && python --version
+    displayName: 'Discover python version'
+
   - script: . venv/bin/activate && pylint sodigest
     displayName: 'Lint'
