@@ -15,6 +15,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '-c', '--config-file',
+        default='/etc/sodigest.yml',
         help='configuration file (default /etc/sodigest.yml)'
     )
     parser.add_argument(
