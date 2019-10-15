@@ -31,7 +31,7 @@ class Question:
             str: Prettified question string.
         """
 
-        return f'{self._title}\n{self._url}\n{self._tags}\n\n'
+        return '{}\n{}\n{}\n\n'.format(self._title, self._url, self._tags)
 
 # pylint: disable=too-many-arguments
 def questions_from_site(
@@ -61,11 +61,13 @@ def questions_from_site(
     question_count = 0
     while has_more and page < 10:
         # pylint: disable=line-too-long
-        req_url = f'{url}/questions?fromdate={from_unix_date}&order=desc&sort=activity&tagged={tags_formatted}&site={site}&page={page}&pagesize=100'
+        req_url = '{}/questions?fromdate={}&order=desc&sort=activity&tagged={}&site={}&page={}&pagesize=100'.format(
+            url, from_unix_date, tags_formatted, site, page
+        )
         response = requests.get(req_url)
 
         if response.status_code != 200:
-            raise Exception(f'Error requesting {req_url}: {response.status_code}')
+            raise Exception('Error requesting {}: {}'.format(req_url, response.status_code))
 
         res_json = response.json()
         has_more = res_json['has_more']

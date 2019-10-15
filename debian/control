@@ -4,7 +4,7 @@ Build-Depends: debhelper,dh-python,python3-all,python3-setuptools
 Section: admin
 Priority: optional
 Standards-Version: 3.9.6
-X-Python3-Version: >= 3.6
+X-Python3-Version: >= 3.5
 
 Package: stackoverflow-digest
 Architecture: any
