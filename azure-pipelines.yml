@@ -17,8 +17,8 @@ steps:
       pip install -r requirements.txt
     displayName: 'Install requirements'
 
-  - script: python --version
-    displayName: 'Discover python version'
-
   - script: pylint sodigest
     displayName: 'Lint'
+
+  - script: ./run_tests.sh
+    displayName: 'Unit tests'
