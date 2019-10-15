@@ -1,0 +1,5 @@
+stackoverflow-digest (0.1.0) UNRELEASED; urgency=medium
+
+  * Initial release.
+
+ -- Thomas Stringer <thstring@microsoft.com>  Tue, 15 Oct 2019 09:50:14 -0400
