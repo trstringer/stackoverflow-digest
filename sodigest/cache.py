@@ -1,6 +1,6 @@
 """Cache module"""
 
-from pathlib import Path
+import os.path
 
 _DEFAULT_CACHE_FILENAME = '~/sodigest'
 
@@ -15,10 +15,10 @@ def get_last_date() -> int:
         int: Last date from cache.
     """
 
-    if not Path(_DEFAULT_CACHE_FILENAME).expanduser().exists():
+    if not os.path.exists(os.path.expanduser(_DEFAULT_CACHE_FILENAME)):
         return None
 
-    with open(Path(_DEFAULT_CACHE_FILENAME).expanduser()) as cache_file:
+    with open(os.path.expanduser(_DEFAULT_CACHE_FILENAME)) as cache_file:
         lines = cache_file.readlines()
 
     if not lines:
@@ -37,5 +37,5 @@ def set_last_date(last_date: int) -> None:
         None
     """
 
-    with open(Path(_DEFAULT_CACHE_FILENAME).expanduser(), 'w+') as cache_file:
+    with open(os.path.expanduser(_DEFAULT_CACHE_FILENAME), 'w+') as cache_file:
         cache_file.write(str(last_date))
