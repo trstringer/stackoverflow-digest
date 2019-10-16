@@ -22,3 +22,6 @@ steps:
 
   - script: ./run_tests.sh
     displayName: 'Unit tests'
+
+  - script: ./deb_build.sh
+    displayName: 'Build deb'
