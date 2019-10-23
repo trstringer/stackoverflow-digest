@@ -1,5 +1,5 @@
-stackoverflow-digest (0.1.1) UNRELEASED; urgency=medium
+stackoverflow-digest (0.1.1) bionic; urgency=medium
 
   * Initial release.
 
- -- Thomas Stringer <thstring@microsoft.com>  Wed, 16 Oct 2019 08:48:26 -0400
+ -- Thomas Stringer <thstring@microsoft.com>  Tue, 22 Oct 2019 23:15:25 -0400
