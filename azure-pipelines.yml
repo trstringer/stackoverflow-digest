@@ -28,3 +28,8 @@ steps:
 
   - script: ./deb_build.sh
     displayName: 'Build deb'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: dist
+      artifactName: deb
