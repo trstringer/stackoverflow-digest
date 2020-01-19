@@ -9,3 +9,9 @@ dch --newversion "$VERSION" "New release"
 dch --release bionic
 
 debuild -i -us -uc -S
+
+echo "$(date) - Making dist dir"
+mkdir -p dist
+
+echo "$(date) - Copying artifacts to dist"
+cp "../stackoverflow-digest_$VERSION"* dist/
